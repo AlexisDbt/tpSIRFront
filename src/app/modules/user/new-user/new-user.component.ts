@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {UserService} from '../../../service/user.service';
+import {Router} from '@angular/router';
+import {Participant} from '../../../interface/participant';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-new-user',
@@ -7,9 +11,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewUserComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService: UserService, private router: Router, private formBuilder: FormBuilder) { }
 
-  ngOnInit(): void {
+  newParticipant: Participant = {
+    email: '',
+    nom: '',
+    prenom: '',
+    allergie: '',
+    preferenceAlim: '',
+    mails: [],
+    reunions: [],
+    sondages: []
+  };
+
+  ngOnInit(){
+
   }
 
+  addParticipant() {
+    this.userService.createParticipant(this.newParticipant).subscribe(value => {
+      this.router.navigate(['/utilisateur/list']);
+      }
+    );
+  }
 }

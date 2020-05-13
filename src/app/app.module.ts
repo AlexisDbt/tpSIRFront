@@ -14,6 +14,9 @@ import {NewUserComponent} from './modules/user/new-user/new-user.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatListModule} from '@angular/material/list';
 import {MatMenuModule} from '@angular/material/menu';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,11 @@ import {MatMenuModule} from '@angular/material/menu';
     RouterModule,
     MatCardModule,
     MatListModule,
-    MatMenuModule
+    MatMenuModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,7 +6,7 @@ export interface Participant {
   email: string;
   nom: string;
   prenom: string;
-  allergies: string;
+  allergie: string;
   preferenceAlim: string;
   mails: Mail[];
   sondages: Sondage[];

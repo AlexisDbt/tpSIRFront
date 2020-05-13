@@ -18,4 +18,8 @@ export class UserService {
   getAllParticipants(): Observable<Participant[]> {
     return this.http.get<Participant[]>(`${this.baseRoute + this.userRoute}`);
   }
+
+  createParticipant(participant: Participant) {
+    return this.http.post<Participant>(`${this.baseRoute + this.userRoute}`, participant);
+  }
 }

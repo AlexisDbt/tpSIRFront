@@ -1,1 +1,24 @@
-<p>new-user works!</p>
+<div class="container">
+  <h2>Création d'un nouvel utilisateur</h2>
+  <form>
+    <div class="form-row m-t-6">
+        <label for="prenom">Prénom </label>
+        <input [(ngModel)]="newParticipant.prenom" type="text" class="form-control" name="prenom" id="prenom"><br><br>
+
+        <label for="nom">Nom </label>
+        <input [(ngModel)]="newParticipant.nom" type="text" class="form-control" name="nom" id="nom"><br><br>
+
+        <label for="email">Email </label>
+        <input [(ngModel)]="newParticipant.email" type="email" class="form-control" name="email" id="email"><br><br>
+
+        <label for="prefAlim">Préférence alimentaire </label>
+        <input [(ngModel)]="newParticipant.preferenceAlim" type="text" class="form-control" name="prefAlim" id="prefAlim"><br><br>
+
+        <label for="allergies">Allergies </label>
+        <input [(ngModel)]="newParticipant.allergie" type="text" class="form-control" name="allergies" id="allergies"><br><br>
+    </div><br>
+    <button type="submit" class="btn btn-primary" (click)="addParticipant()">Créer l'utilisateur</button>
+  </form>
+</div>
+
+
