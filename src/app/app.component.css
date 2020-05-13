@@ -1,0 +1,8 @@
+.menu {
+  display: table-cell;
+}
+
+.menu button {
+  display: table-cell;
+  margin-right: 8px;
+}

@@ -11,6 +11,9 @@ import { RouterModule } from '@angular/router';
 import {ListUserComponent} from './modules/user/list-user/list-user.component';
 import {AccueilUserComponent} from './modules/user/accueil-user/accueil-user.component';
 import {NewUserComponent} from './modules/user/new-user/new-user.component';
+import {MatCardModule} from '@angular/material/card';
+import {MatListModule} from '@angular/material/list';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import {NewUserComponent} from './modules/user/new-user/new-user.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    MatCardModule,
+    MatListModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
