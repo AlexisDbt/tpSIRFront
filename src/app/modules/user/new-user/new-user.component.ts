@@ -11,7 +11,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 export class NewUserComponent implements OnInit {
 
-  constructor(private userService: UserService, private router: Router, private formBuilder: FormBuilder) { }
+  constructor(private userService: UserService, private router: Router) { }
 
   newParticipant: Participant = {
     email: '',

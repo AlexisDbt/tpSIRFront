@@ -1,28 +1,56 @@
-.fill-remaining-space {
-  flex: 1 1 auto;
+p {
+  margin-top: 0px;
 }
 
-.container {
+fieldset {
+  margin-bottom: 15px;
   padding: 10px;
 }
 
-.form {
-  min-width: 150px;
-  max-width: 500px;
-  width: 100%;
+legend {
+  padding: 0px 3px;
+  font-weight: bold;
+  font-variant: small-caps;
 }
 
-.form-element {
-  padding: 5px 0px 25px 2px;
-  width: 100%;
+label {
+  width: 110px;
+  display: inline-block;
+  vertical-align: top;
+  margin: 6px;
 }
 
-.button {
-  width: 100%;
+em {
+  font-weight: bold;
+  font-style: normal;
+  color: #f00;
 }
 
-.label {
-  display:block;
-  width:100px;
-  float:left;
+input:focus {
+  background: #eaeaea;
+}
+
+input, textarea {
+  width: 249px;
+}
+
+textarea {
+  height: 100px;
+}
+
+select {
+  width: 254px;
+}
+
+input[type=checkbox] {
+  width: 10px;
+}
+
+input[type=submit] {
+  width: 150px;
+  padding: 10px;
+}
+
+h2 {
+ color: #4B0082;
 }
