@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="container">
+    <h2>Création d'un sondage pour le choix d'une date pour une réunion</h2>
+    <form action="#">
+      <fieldset>
+        <legend>Sondage</legend>
+        <label for="createur">Email createur sondage</label>
+        <input [(ngModel)]="newSondage.createur.email" type="text" class="form-control" name="createur" id="createur"><br>
+
+        <label for="intitule">Intitule </label>
+        <input [(ngModel)]="newReunion.intitule" type="text" class="form-control" name="intitule" id="intitule"><br>
+
+        <label for="resume">Resumé </label>
+        <input [(ngModel)]="newReunion.resume" type="text" class="form-control" name="resume" id="resume"><br>
+
+        <label for="date1">Première date </label>
+        <input [(ngModel)]="newProposition.date" type="date" class="form-control" name="date1" id="date1"><br>
+
+        <label for="date2">Seconde date </label>
+        <input [(ngModel)]="newProposition2.date" type="date" class="form-control" name="date2" id="date2"><br>
+      </fieldset>
+    </form>
+  </div>
+  <p><button type="submit" class="btn btn-primary" (click)="addSondage()">Créer le sondage</button></p>
+</div>

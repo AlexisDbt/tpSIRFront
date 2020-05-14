@@ -4,11 +4,11 @@
 <div class="menu">
 <button mat-raised-button color="primary" [matMenuTriggerFor]="menu">Menu</button>
   <mat-menu #menu="matMenu">
-    <a mat-stroked-button  href="#" target="_blank">Accueil</a><br>
-    <a mat-stroked-button  routerLink="/list-utilisateurs" routerLinkActive="active" target="_blank">Liste des utilisateurs</a><br>
-    <a mat-stroked-button  routerLink="/creer-utilisateur" routerLinkActive="active" target="_blank">Créer un nouvel utilisateur</a><br>
-    <a mat-stroked-button  routerLink="/creer-utilisateur" routerLinkActive="active" target="_blank">Nouveau sondage</a><br>
-    <a mat-stroked-button  routerLink="/creer-utilisateur" routerLinkActive="active" target="_blank">Reunion</a>
+    <a mat-stroked-button  href="#">Accueil</a><br>
+    <a mat-stroked-button  routerLink="/list-utilisateurs" routerLinkActive="active">Liste des utilisateurs</a><br>
+    <a mat-stroked-button  routerLink="/creer-utilisateur" routerLinkActive="active" >Créer un nouvel utilisateur</a><br>
+    <a mat-stroked-button  routerLink="/creer-sondage" routerLinkActive="active" >Nouveau sondage</a><br>
+    <a mat-stroked-button  routerLink="/creer-utilisateur" routerLinkActive="active">Reunion</a>
   </mat-menu>
 </div>
 <router-outlet></router-outlet>
