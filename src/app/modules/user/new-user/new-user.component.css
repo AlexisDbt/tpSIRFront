@@ -2,22 +2,8 @@ p {
   margin-top: 0px;
 }
 
-fieldset {
-  margin-bottom: 15px;
-  padding: 10px;
-}
-
-legend {
-  padding: 0px 3px;
-  font-weight: bold;
-  font-variant: small-caps;
-}
-
-label {
-  width: 110px;
-  display: inline-block;
-  vertical-align: top;
-  margin: 6px;
+mat-form-field {
+  margin-left: 20px;
 }
 
 em {
@@ -52,5 +38,10 @@ input[type=submit] {
 }
 
 h2 {
+  margin-left: 20px;
  color: #4B0082;
+}
+
+button{
+  margin-left: 20px;
 }

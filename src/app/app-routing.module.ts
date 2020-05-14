@@ -12,6 +12,7 @@ const routes: Routes = [
   {path: 'list-utilisateurs', component: ListUserComponent},
   {path: 'creer-utilisateur', component: NewUserComponent},
   {path: 'creer-sondage', component: NewSondageComponent}
+  //{path: 'list-reunions', component: }
 ];
 
 @NgModule({
