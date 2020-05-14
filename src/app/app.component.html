@@ -2,13 +2,13 @@
   <span class="mat-card-title">Application de prise de rendez-vous</span>
 </mat-toolbar>
 <div class="menu">
-<button mat-raised-button color="primary" [matMenuTriggerFor]="menu">Menu</button>
+<button mat-button color="primary" [matMenuTriggerFor]="menu">Menu</button>
   <mat-menu #menu="matMenu">
-    <a mat-stroked-button  href="#">Accueil</a><br>
-    <a mat-stroked-button  routerLink="/list-utilisateurs" routerLinkActive="active">Liste des utilisateurs</a><br>
-    <a mat-stroked-button  routerLink="/creer-utilisateur" routerLinkActive="active" >Créer un nouvel utilisateur</a><br>
-    <a mat-stroked-button  routerLink="/creer-sondage" routerLinkActive="active" >Nouveau sondage</a><br>
-    <a mat-stroked-button  routerLink="/creer-utilisateur" routerLinkActive="active">Reunion</a>
+    <a mat-menu-item  href="#">Accueil</a><br>
+    <a mat-menu-item  routerLink="/list-utilisateurs" routerLinkActive="active" >Liste des utilisateurs</a><br>
+    <a mat-menu-item  routerLink="/creer-utilisateur" routerLinkActive="active" >Créer un nouvel utilisateur</a><br>
+    <a mat-menu-item  routerLink="/creer-utilisateur" routerLinkActive="active" >Nouveau sondage</a><br>
+    <a mat-menu-item  routerLink="/creer-utilisateur" routerLinkActive="active" >Reunion</a>
   </mat-menu>
 </div>
 <router-outlet></router-outlet>
