@@ -14,16 +14,19 @@
         <mat-label for="prenom">Prénom </mat-label>
         <input matInput [(ngModel)]="newParticipant.prenom" type="text" class="form-control" name="prenom" id="prenom" required>
       </mat-form-field>
+    <mat-error *ngIf="emptyPrenom">Veuillez renseigner un prénom.</mat-error>
     <br>
       <mat-form-field appearance="outline">
         <mat-label for="nom">Nom </mat-label>
         <input matInput [(ngModel)]="newParticipant.nom" type="text" class="form-control" name="nom" id="nom" required>
       </mat-form-field>
+    <mat-error *ngIf="emptyNom">Veuillez renseigner un nom.</mat-error>
     <br>
     <mat-form-field appearance="outline">
       <mat-label for="email">Email </mat-label>
       <input matInput [(ngModel)]="newParticipant.email" type="email" class="form-control" name="email" id="email" required>
     </mat-form-field>
+    <mat-error *ngIf="emptyMail">Veuillez renseigner un mail.</mat-error>
     <br>
     <mat-form-field appearance="outline">
       <mat-label for="prefAlim">Préférence alimentaire </mat-label>
@@ -36,7 +39,7 @@
     </mat-form-field>
     <br>
   </div>
-  <button mat-raised-button color="primary" (click)="addParticipant()">S'inscrire à cette réunion</button>
+  <button mat-raised-button color="primary" (click)="addParticipant() ">S'inscrire à cette réunion</button>
 </div>
 
 

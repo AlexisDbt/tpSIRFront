@@ -45,3 +45,7 @@ h2 {
 button{
   margin-left: 20px;
 }
+
+mat-error{
+  margin-left: 20px;
+}

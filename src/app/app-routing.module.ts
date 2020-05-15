@@ -7,6 +7,7 @@ import {NewUserComponent} from './modules/user/new-user/new-user.component';
 import {NewSondageComponent} from './modules/sondage/new-sondage/new-sondage.component';
 import {NewReunionComponent} from './modules/reunion/new-reunion/new-reunion.component';
 import {ListReunionComponent} from './modules/reunion/list-reunion/list-reunion.component';
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 const routes: Routes = [
   {path: '', component: AccueilComponent},

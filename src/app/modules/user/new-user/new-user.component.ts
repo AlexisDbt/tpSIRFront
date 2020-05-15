@@ -5,6 +5,7 @@ import {Participant} from '../../../interface/participant';
 import {Reunion} from '../../../interface/reunion';
 import {ReunionService} from '../../../service/reunion.service';
 import {FormControl, FormGroup} from '@angular/forms';
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-new-user',
@@ -13,15 +14,18 @@ import {FormControl, FormGroup} from '@angular/forms';
 })
 export class NewUserComponent implements OnInit {
 
-  constructor(private userService: UserService, private router: Router, private reunionService: ReunionService) { }
+  constructor(private userService: UserService, private router: Router, private reunionService: ReunionService, private _snackBar: MatSnackBar) { }
 
   reunionList: Reunion[] = [];
   form: FormGroup;
+  emptyPrenom: boolean;
+  emptyNom: boolean;
+  emptyMail: boolean;
 
   newParticipant: Participant = {
-    email: '',
-    nom: '',
-    prenom: '',
+    email: null,
+    nom: null,
+    prenom: null,
     allergie: '',
     preferenceAlim: '',
     mails: [],
@@ -36,10 +40,20 @@ export class NewUserComponent implements OnInit {
   }
 
   addParticipant() {
-    this.userService.createParticipant(this.newParticipant).subscribe(value => {
+    console.log(this.newParticipant);
+    this.emptyPrenom = !Boolean(this.newParticipant.prenom);
+    this.emptyNom = !Boolean(this.newParticipant.nom);
+    this.emptyMail = !Boolean(this.newParticipant.email);
+    if (!this.emptyMail && !this.emptyNom && !this.emptyPrenom){
+      console.log("champ rempli");
+      this.userService.createParticipant(this.newParticipant).subscribe(value => {
+        this._snackBar.open("Nouveau participant créé !",'',{
+          duration: 2000,
+        });
           debugger;
-      }
-    );
 
+        }
+      );
+  }
   }
 }
