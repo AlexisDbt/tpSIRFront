@@ -1,27 +1,26 @@
-# TpSIRFront
+# Application doodle
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.5.
+Ce projet est un projet Universitaire de Master 1 MIAGE, répliquant le fonctionnement d'une application de type de rendez-vous comme Doodle. Le projet comporte deux parties :
+Le frontend développé en Angular
+Le backend en Java
 
-## Development server
+## Frontend
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Angular a permis de concevoir une application web simple, et bien structuré. Le frontend communique avec l'API rest mise en place par le Backend.
 
-## Code scaffolding
+Avec toutes les données récupées, on alimente les différentes pages, tableaux de l'application avec des requêtes GET ou POST pour l'envoie de données.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Nous avons également utilisé Angular Material afin de rendre tout cela plus esthétique.
 
-## Build
+## Backend
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Le frontend donc appelle l'api REST du backend afin de récupérer les informations. Le repo du backend est disponible ici : https://github.com/AlexisDbt/tpjpa2019sir
 
-## Running unit tests
+## Fonctionnalités
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Via le menu en haut à gauche de l'application, on peut :
+  * Accéder à tous les utilisateurs
+  * Un utilisateur peut s'inscrire à une réunion en y précisant ces informations personnelles
+  * Créer un nouveau sondage pour choisir la date d'une future réunion (Non finit)
+  * Créer une nouvelle réunion en y ajoutant les informations de cette dernière
+  * Accéder à la liste de toutes les réunions et voir les participants de chaque réunion
