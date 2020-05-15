@@ -34,6 +34,7 @@ export class NewReunionComponent implements OnInit {
   }
 
   addReunion() {
+    console.log(this.newReunion);
     this.reunionService.createReunion(this.newReunion).subscribe(value => {});
   }
 

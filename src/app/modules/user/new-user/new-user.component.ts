@@ -48,8 +48,9 @@ export class NewUserComponent implements OnInit {
       console.log("champ rempli");
       this.userService.createParticipant(this.newParticipant).subscribe(value => {
         this._snackBar.open("Nouveau participant créé !",'',{
-          duration: 2000,
+          duration: 3000,
         });
+        this.router.navigate(['/']);
           debugger;
 
         }
