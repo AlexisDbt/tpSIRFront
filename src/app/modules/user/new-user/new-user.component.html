@@ -1,8 +1,16 @@
 <div class="main-content">
   <div class="container-fluid">
-    <h2>Création d'un nouvel utilisateur</h2>
+    <h2>Inscription à une réunion</h2>
+    <mat-form-field appearance="outline">
+      <mat-label for="reunion">Reunion </mat-label>
+      <mat-select [(ngModel)]="newParticipant.reunion">
+        <mat-option *ngFor="let reunion of reunionList" [value]="reunion.id">
+          {{reunion?.intitule}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
       <mat-form-field appearance="outline">
-        <!--<legend>Informations personnelles</legend>-->
         <mat-label for="prenom">Prénom </mat-label>
         <input matInput [(ngModel)]="newParticipant.prenom" type="text" class="form-control" name="prenom" id="prenom" required>
       </mat-form-field>
@@ -28,7 +36,7 @@
     </mat-form-field>
     <br>
   </div>
-  <button mat-raised-button color="primary" (click)="addParticipant()"> Créer l'utilisateur</button>
+  <button mat-raised-button color="primary" (click)="addParticipant()">S'inscrire à cette réunion</button>
 </div>
 
 

@@ -1,0 +1,24 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <h2>Création d'une nouvelle réunion</h2>
+    <mat-form-field appearance="outline">
+      <mat-label for="intitule">Intitule </mat-label>
+      <input matInput [(ngModel)]="newReunion.intitule" type="email" class="form-control" name="intitule" id="intitule" required>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+      <mat-label for="resume">Résumé </mat-label>
+      <textarea matInput [(ngModel)]="newReunion.resume" rows="5" cols="33" type="text" class="form-control" name="resume" id="resume" required></textarea>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+      <mat-label for="date">Date </mat-label>
+      <input matInput [(ngModel)]="newReunion.date" type="date" class="form-control" name="date" id="date" required>
+    </mat-form-field>
+    <br>
+  </div>
+  <button mat-raised-button color="primary" (click)="addReunion()">Créer la réunion</button>
+</div>
+
+
+

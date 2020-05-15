@@ -1,25 +1,33 @@
-<div class="container">
-  <div class="container">
-    <h2>Création d'un sondage pour le choix d'une date pour une réunion</h2>
-    <form action="#">
-      <fieldset>
-        <legend>Sondage</legend>
-        <label for="createur">Email createur sondage</label>
-        <input [(ngModel)]="newSondage.createur.email" type="text" class="form-control" name="createur" id="createur"><br>
-
-        <label for="intitule">Intitule </label>
-        <input [(ngModel)]="newReunion.intitule" type="text" class="form-control" name="intitule" id="intitule"><br>
-
-        <label for="resume">Resumé </label>
-        <input [(ngModel)]="newReunion.resume" type="text" class="form-control" name="resume" id="resume"><br>
-
-        <label for="date1">Première date </label>
-        <input [(ngModel)]="newProposition.date" type="date" class="form-control" name="date1" id="date1"><br>
-
-        <label for="date2">Seconde date </label>
-        <input [(ngModel)]="newProposition2.date" type="date" class="form-control" name="date2" id="date2"><br>
-      </fieldset>
-    </form>
+<div class="main-content">
+  <div class="container-fluid">
+    <h2>Création d'un nouveau sondage</h2>
+    <mat-form-field appearance="outline">
+      <mat-label for="createur">Email du créateur </mat-label>
+      <input matInput [(ngModel)]="newSondage.createur.email" type="email" class="form-control" name="createur" id="createur" required>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+      <mat-label for="intitule">Intitule </mat-label>
+      <input matInput [(ngModel)]="newReunion.intitule" type="text" class="form-control" name="intitule" id="intitule" required>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+      <mat-label for="resume">Résumé </mat-label>
+      <input matInput [(ngModel)]="newReunion.resume" type="email" class="form-control" name="resume" id="resume" required>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+      <mat-label for="date1">Première date </mat-label>
+      <input matInput [(ngModel)]="newProposition.date" type="date" class="form-control" name="date1" id="date1">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="outline">
+      <mat-label for="date2">Seconde date </mat-label>
+      <input matInput [(ngModel)]="newProposition2.date" type="date" class="form-control" name="date2" id="date2">
+    </mat-form-field>
+    <br>
   </div>
-  <p><button type="submit" class="btn btn-primary" (click)="addSondage()">Créer le sondage</button></p>
+  <button mat-raised-button color="primary" (click)="addSondage()">Créer le sondage</button>
 </div>
+
+

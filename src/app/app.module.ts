@@ -18,8 +18,10 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import {NewSondageComponent} from './modules/sondage/new-sondage/new-sondage.component';
-import {MatButtonModule} from "@angular/material/button";
-import {MatInputModule} from "@angular/material/input";
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import {NewReunionComponent} from './modules/reunion/new-reunion/new-reunion.component';
+import {ListReunionComponent} from './modules/reunion/list-reunion/list-reunion.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import {MatInputModule} from "@angular/material/input";
     ListUserComponent,
     AccueilUserComponent,
     NewUserComponent,
-    NewSondageComponent
+    NewSondageComponent,
+    NewReunionComponent,
+    ListReunionComponent
   ],
   imports: [
     BrowserModule,
